@@ -1,5 +1,5 @@
 {
-  "name": "Like App",
+  "name": "likeapp",
   "version": "1.0.0",
   "description": "Auto-Scalable Like App Demo",
   "main": "add-orders.js",
@@ -29,6 +29,6 @@
     "async": "^1.5.2",
     "request": "^2.53.0",
     "sync-request": "^2.0.1",
-    "yawp": "^1.0.26"
+    "yawp": "^1.0.27"
   }
 }

@@ -11,8 +11,8 @@ module.exports = (function () {
     });
 
     function run() {
-        if (process.argv.length != 4) {
-            console.error('use: many-likes [post id] [total manyLikes] [parallel requests]');
+        if (process.argv.length != 5) {
+            console.error('use: many-likes [post id] [total likes] [parallel requests]');
             return;
         }
 
@@ -31,7 +31,7 @@ module.exports = (function () {
         var throughputBatchCount = 0;
         var throughputBatchDone = 0;
 
-        function like(callback) {
+        function like(i, callback) {
             if (batchDone == BATCH_SIZE_FOR_THROUGHPUT) {
                 logBatchThroughput();
                 batchDone = 0;
@@ -41,7 +41,7 @@ module.exports = (function () {
                 postId: '/posts/' + postId
             };
 
-            console.log('like++');
+            console.log('like', i+1);
 
             yawp('/likes').create(json).then(function () {
                 done++;
