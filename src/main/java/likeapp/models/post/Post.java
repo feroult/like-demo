@@ -10,7 +10,7 @@ public class Post {
     @Id
     IdRef<Post> id;
 
-    String content;
+    String title;
 
     long likes;
 
