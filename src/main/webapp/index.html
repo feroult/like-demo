@@ -7,27 +7,30 @@
 </head>
 <body>
 
-<section class="current">
-    <div>
-        <label class="left">Throughput</label>
-        <span class="number">10</span>
-        <label class="right">likes/s</label>
-    </div>
-</section>
 
-<section class="max">
-    <div>
-        <label class="left">Max</label>
-        <span class="number">10</span>
-        <label class="right"></label>
-    </div>
-</section>
+<section class="content">
 
+    <section class="current throughput">
+        <div>
+            <label class="left">Throughput</label>
+            <span id="current-throughput" class="number"></span>
+            <label class="right">likes/s</label>
+        </div>
+    </section>
 
-<section class="separator">
-    <div>
-        <hr />
-    </div>
+    <section class="max throughput">
+        <div>
+            <label class="left">Max</label>
+            <span id="max-throughput" class="number"></span>
+            <label class="right"></label>
+        </div>
+    </section>
+
+    <hr/>
+
+    <section class="posts">
+    </section>
+
 </section>
 
 <script src="js/jquery.min.js"></script>
