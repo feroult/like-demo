@@ -1,6 +1,7 @@
 #!/bin/bash
 
-TITLE=$1
+ID=$1
+TITLE=$2
 BACKEND_API=${LIKEAPP_API:-http://localhost:8080/api}
 
-curl -H "Content-type: application/json" -X POST -d "{ title: '$TITLE' }" $BACKEND_API/posts; echo
+curl -H "Content-type: application/json" -X PUT -d "{ title: '$TITLE' }" $BACKEND_API/posts/$ID; echo
