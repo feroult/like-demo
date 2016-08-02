@@ -1,0 +1,12 @@
+<queue-entries>
+    <queue>
+        <name>default</name>
+        <rate>500/s</rate>
+        <bucket-size>500</bucket-size>
+        <retry-parameters>
+            <min-backoff-seconds>1</min-backoff-seconds>
+            <max-backoff-seconds>3</max-backoff-seconds>
+            <max-doublings>2</max-doublings>
+        </retry-parameters>
+    </queue>
+</queue-entries>
