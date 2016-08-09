@@ -9,12 +9,12 @@
     <packaging>war</packaging>
 
     <properties>
-        <yawp.version>1.6.6</yawp.version>
+        <yawp.version>1.6.7-SNAPSHOT</yawp.version>
         <appengine.app.version>1</appengine.app.version>
         <appengine.target.version>1.9.31</appengine.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
+    
     <dependencies>
         <dependency>
             <groupId>io.yawp</groupId>

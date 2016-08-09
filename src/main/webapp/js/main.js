@@ -102,7 +102,7 @@
         var id = post.id.replace(new RegExp('/', 'g'), '');
         var div = $('<div id="' + id + '" />');
         div.append('<label class="left">' + post.title + '</label>');
-        div.append('<span class="likes">' + format(post.likes, 1) + '</span> likes');
+        div.append('<span class="likes">' + post.likes + '</span> likes');
         div.append('<span class="added">' + (added ? '+' + format(added, 0) : '') + '</span>');
 
         var selector = '#' + id;

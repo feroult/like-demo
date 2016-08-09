@@ -1,7 +1,7 @@
 module.exports = (function () {
 
     const BACKEND_API = process.env.LIKEAPP_API;
-    const BATCH_SIZE_FOR_THROUGHPUT = 100;
+    const BATCH_SIZE_FOR_THROUGHPUT = 40;
 
     var async = require('async');
     var yawp = require('yawp');

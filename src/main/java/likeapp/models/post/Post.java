@@ -23,4 +23,16 @@ public class Post {
     public void unlike() {
         likes--;
     }
+
+    public void like(long likes) {
+        this.likes += likes;
+    }
+
+    public void unlike(long likes) {
+        this.likes -= likes;
+    }
+
+    public void drain() {
+        this.likes = 0;
+    }
 }
