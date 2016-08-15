@@ -1,6 +1,6 @@
 module.exports = (function () {
 
-    const BACKEND_API = process.env.LIKEAPP_API;
+    const BACKEND_API = process.env.LIKEDEMO_API;
     const BATCH_SIZE_FOR_THROUGHPUT = 40;
 
     var async = require('async');
