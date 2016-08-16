@@ -67,28 +67,28 @@
         </web-resource-collection>
     </security-constraint -->
 
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>likeapp-tasks</web-resource-name>
-            <url-pattern>/api/_tasks/*</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>admin</role-name>
-        </auth-constraint>
-    </security-constraint>
+    <!--<security-constraint>-->
+        <!--<web-resource-collection>-->
+            <!--<web-resource-name>likeapp-tasks</web-resource-name>-->
+            <!--<url-pattern>/api/_tasks/*</url-pattern>-->
+        <!--</web-resource-collection>-->
+        <!--<auth-constraint>-->
+            <!--<role-name>admin</role-name>-->
+        <!--</auth-constraint>-->
+    <!--</security-constraint>-->
 
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>likeapp-admin</web-resource-name>
-            <url-pattern>/_ah/*</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>admin</role-name>
-        </auth-constraint>
-    </security-constraint>
+    <!--<security-constraint>-->
+        <!--<web-resource-collection>-->
+            <!--<web-resource-name>likeapp-admin</web-resource-name>-->
+            <!--<url-pattern>/_ah/*</url-pattern>-->
+        <!--</web-resource-collection>-->
+        <!--<auth-constraint>-->
+            <!--<role-name>admin</role-name>-->
+        <!--</auth-constraint>-->
+    <!--</security-constraint>-->
 
-    <security-role>
-        <role-name>admin</role-name>
-    </security-role>
+    <!--<security-role>-->
+        <!--<role-name>admin</role-name>-->
+    <!--</security-role>-->
 
 </web-app>
