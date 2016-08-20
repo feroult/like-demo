@@ -102,6 +102,7 @@
                 <configuration>
                     <!-- <address>0.0.0.0</address> -->
                     <jvmFlags>
+                        <jvmFlag>-XX:+PreserveFramePointer</jvmFlag>
                         <jvmFlag>-Xdebug</jvmFlag>
                         <jvmFlag>-Xnoagent</jvmFlag>
                         <jvmFlag>-Xrunjdwp:transport=dt_socket,address=4001,suspend=n,server=y
