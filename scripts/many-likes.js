@@ -32,7 +32,7 @@ module.exports = (function () {
         var throughputBatchDone = 0;
 
         function like(i, callback) {
-            if (batchDone == BATCH_SIZE_FOR_THROUGHPUT) {
+            if (batchDone >= BATCH_SIZE_FOR_THROUGHPUT) {
                 logBatchThroughput();
                 batchDone = 0;
             }
