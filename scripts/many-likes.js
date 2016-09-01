@@ -1,7 +1,7 @@
 module.exports = (function () {
 
     const BACKEND_API = process.env.LIKEDEMO_API;
-    const BATCH_SIZE_FOR_THROUGHPUT = 40;
+    const BATCH_SIZE_FOR_THROUGHPUT = 100;
 
     var async = require('async');
     var yawp = require('yawp');
@@ -26,15 +26,13 @@ module.exports = (function () {
     function manyLikes(postId, totalLikes, parallelRequests) {
         var start = new Date();
         var done = 0;
+
+        var batchStart = new Date();
         var batchDone = 0;
-        var throughputStart = new Date();
-        var throughputBatchCount = 0;
-        var throughputBatchDone = 0;
 
         function like(i, callback) {
             if (batchDone >= BATCH_SIZE_FOR_THROUGHPUT) {
                 logBatchThroughput();
-                batchDone = 0;
             }
 
             var json = {
@@ -46,7 +44,6 @@ module.exports = (function () {
             yawp('/likes').create(json).then(function () {
                 done++;
                 batchDone++;
-                throughputBatchDone++;
                 callback();
             }).catch(function (err) {
                 console.log('fail?! ', err);
@@ -61,18 +58,14 @@ module.exports = (function () {
         }
 
         function logBatchThroughput() {
-            var t = throughput(throughputStart, throughputBatchDone);
+            var t = throughput(batchStart, batchDone);
             yawp('/throughputs/' + postId).update({
                 value: t.throughput,
                 timestamp: new Date().getTime()
             });
 
-            throughputBatchCount++;
-            if (throughputBatchCount == 10) {
-                throughputStart = new Date();
-                throughputBatchDone = 0;
-                throughputBatchCount = 0;
-            }
+            batchStart = new Date();
+            batchDone = 0;
         }
 
         function logTotalThroughput() {
